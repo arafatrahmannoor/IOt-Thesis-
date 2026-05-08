@@ -1,0 +1,470 @@
+/* ===========================================
+   Quill.js Editor Content Styles
+   Use with: <div id="quill-content" dangerouslySetInnerHTML={{__html: content}} />
+   =========================================== */
+
+#quill-content {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  line-height: 1.7;
+  color: #495057;
+  font-size: 16px;
+}
+
+/* ===========================================
+   INLINE FORMATTING
+   =========================================== */
+
+/* Background Color */
+#quill-content .ql-background {
+  background-color: inherit;
+}
+
+/* Bold */
+#quill-content strong,
+#quill-content b {
+  font-weight: 700;
+}
+
+/* Color */
+#quill-content .ql-color {
+  color: inherit;
+}
+
+/* Font Family */
+#quill-content .ql-font {
+  font-family: inherit;
+}
+
+/* Inline Code */
+#quill-content code {
+  background-color: #f1f3f4;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 0.9em;
+  color: #d63384;
+  border: 1px solid #e9ecef;
+}
+
+/* Italic */
+#quill-content em,
+#quill-content i {
+  font-style: italic;
+}
+
+/* Links */
+#quill-content a {
+  color: #0975e0;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+#quill-content a:hover {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+/* Font Size */
+#quill-content .ql-size-small {
+  font-size: 0.75em;
+}
+
+#quill-content .ql-size-large {
+  font-size: 1.5em;
+}
+
+#quill-content .ql-size-huge {
+  font-size: 2.5em;
+}
+
+/* Strikethrough */
+#quill-content s,
+#quill-content strike {
+  text-decoration: line-through;
+}
+
+/* Superscript/Subscript */
+#quill-content sup {
+  vertical-align: super;
+  font-size: 0.8em;
+}
+
+#quill-content sub {
+  vertical-align: sub;
+  font-size: 0.8em;
+}
+
+/* Underline */
+#quill-content u {
+  text-decoration: underline;
+}
+
+/* ===========================================
+   BLOCK FORMATTING
+   =========================================== */
+
+/* Blockquote */
+#quill-content blockquote {
+  border-left: 4px solid #ff4777;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: #6c757d;
+  font-style: italic;
+  background-color: #f8f9fa;
+  padding: 1rem 1rem 1rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+}
+
+/* Headers */
+#quill-content h1 {
+  font-size: 5.5rem !important;
+  font-weight: 700;
+  margin: 2rem 0 1rem 0;
+  line-height: 1.2;
+  color: #212529;
+}
+
+#quill-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1.75rem 0 0.875rem 0;
+  line-height: 1.3;
+  color: #212529;
+}
+
+#quill-content h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem 0;
+  line-height: 1.4;
+  color: #212529;
+}
+
+#quill-content h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.625rem 0;
+  line-height: 1.4;
+  color: #212529;
+}
+
+#quill-content h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem 0;
+  line-height: 1.5;
+  color: #212529;
+}
+
+#quill-content h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.875rem 0 0.4375rem 0;
+  line-height: 1.5;
+  color: #212529;
+}
+
+/* Indent */
+#quill-content .ql-indent-1 {
+  padding-left: 3em;
+}
+
+#quill-content .ql-indent-2 {
+  padding-left: 6em;
+}
+
+#quill-content .ql-indent-3 {
+  padding-left: 9em;
+}
+
+#quill-content .ql-indent-4 {
+  padding-left: 12em;
+}
+
+#quill-content .ql-indent-5 {
+  padding-left: 15em;
+}
+
+#quill-content .ql-indent-6 {
+  padding-left: 18em;
+}
+
+#quill-content .ql-indent-7 {
+  padding-left: 21em;
+}
+
+#quill-content .ql-indent-8 {
+  padding-left: 24em;
+}
+
+/* Lists */
+#quill-content ul,
+#quill-content ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+#quill-content ul {
+  list-style-type: disc;
+}
+
+#quill-content ol {
+  list-style-type: decimal;
+}
+
+#quill-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+#quill-content ul ul,
+#quill-content ol ol,
+#quill-content ul ol,
+#quill-content ol ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+#quill-content ul ul {
+  list-style-type: circle;
+}
+
+#quill-content ul ul ul {
+  list-style-type: square;
+}
+
+/* Text Alignment */
+#quill-content .ql-align-center {
+  text-align: center;
+}
+
+#quill-content .ql-align-justify {
+  text-align: justify;
+}
+
+#quill-content .ql-align-right {
+  text-align: right;
+}
+
+#quill-content .ql-align-left {
+  text-align: left;
+}
+
+/* Text Direction */
+#quill-content .ql-direction-rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Code Block */
+#quill-content pre {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #495057;
+}
+
+#quill-content pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ===========================================
+   EMBEDS
+   =========================================== */
+
+/* Formula (KaTeX) */
+#quill-content .ql-formula {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Images */
+#quill-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Videos */
+#quill-content .ql-video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ===========================================
+   PARAGRAPHS AND SPACING
+   =========================================== */
+
+#quill-content p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+#quill-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===========================================
+   TABLES
+   =========================================== */
+
+#quill-content table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #dee2e6;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#quill-content th,
+#quill-content td {
+  border: 1px solid #dee2e6;
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+#quill-content thead {
+  background-color: #f8f9fa;
+}
+
+#quill-content thead th {
+  font-weight: 600;
+  color: #495057;
+}
+
+#quill-content tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+#quill-content tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+/* ===========================================
+   RESPONSIVE DESIGN
+   =========================================== */
+
+@media (max-width: 768px) {
+  #quill-content {
+    font-size: 14px;
+  }
+
+  #quill-content h1 {
+    font-size: 2rem;
+  }
+
+  #quill-content h2 {
+    font-size: 1.75rem;
+  }
+
+  #quill-content h3 {
+    font-size: 1.5rem;
+  }
+
+  #quill-content h4 {
+    font-size: 1.25rem;
+  }
+
+  #quill-content h5 {
+    font-size: 1.125rem;
+  }
+
+  #quill-content h6 {
+    font-size: 1rem;
+  }
+
+  #quill-content ul,
+  #quill-content ol {
+    padding-left: 1.5rem;
+  }
+
+  #quill-content .ql-indent-1 {
+    padding-left: 2em;
+  }
+
+  #quill-content .ql-indent-2 {
+    padding-left: 4em;
+  }
+
+  #quill-content .ql-indent-3 {
+    padding-left: 6em;
+  }
+
+  #quill-content .ql-indent-4 {
+    padding-left: 8em;
+  }
+
+  #quill-content .ql-indent-5 {
+    padding-left: 10em;
+  }
+
+  #quill-content .ql-indent-6 {
+    padding-left: 12em;
+  }
+
+  #quill-content .ql-indent-7 {
+    padding-left: 14em;
+  }
+
+  #quill-content .ql-indent-8 {
+    padding-left: 16em;
+  }
+
+  #quill-content table {
+    font-size: 0.875rem;
+  }
+
+  #quill-content th,
+  #quill-content td {
+    padding: 0.5rem;
+  }
+}
+
+/* ===========================================
+   PRINT STYLES
+   =========================================== */
+
+@media print {
+  #quill-content {
+    color: #000;
+    background: #fff;
+  }
+
+  #quill-content a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  #quill-content img,
+  #quill-content .ql-video {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  #quill-content blockquote {
+    border-left: 2px solid #000;
+    background: none;
+  }
+}

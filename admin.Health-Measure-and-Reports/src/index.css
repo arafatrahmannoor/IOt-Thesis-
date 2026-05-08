@@ -1,0 +1,502 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap")
+layer(base);
+
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-*: initial;
+  --font-outfit: Outfit, sans-serif;
+
+  --breakpoint-*: initial;
+  --breakpoint-2xsm: 375px;
+  --breakpoint-xsm: 425px;
+  --breakpoint-3xl: 2000px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  --text-title-2xl: 72px;
+  --text-title-2xl--line-height: 90px;
+  --text-title-xl: 60px;
+  --text-title-xl--line-height: 72px;
+  --text-title-lg: 48px;
+  --text-title-lg--line-height: 60px;
+  --text-title-md: 36px;
+  --text-title-md--line-height: 44px;
+  --text-title-sm: 30px;
+  --text-title-sm--line-height: 38px;
+  --text-theme-xl: 20px;
+  --text-theme-xl--line-height: 30px;
+  --text-theme-sm: 14px;
+  --text-theme-sm--line-height: 20px;
+  --text-theme-xs: 12px;
+  --text-theme-xs--line-height: 18px;
+
+  --color-current: currentColor;
+  --color-transparent: transparent;
+  --color-white: #ffffff;
+  --color-black: #101828;
+
+  --color-primary: #ff4778;
+  /* base color */
+  --color-primary-25: #fff0f2;
+  /* very light pink */
+  --color-primary-50: #fff0f4;
+  /* very light pink */
+  --color-primary-100: #ffd9e2;
+  /* pale pink */
+  --color-primary-200: #ffb3c6;
+  /* soft pink */
+  --color-primary-300: #ff8bab;
+  /* light rose */
+  --color-primary-400: #ff638f;
+  /* bright rose */
+  --color-primary-500: #ff4778;
+  /* base color */
+  --color-primary-600: #e63f6c;
+  /* deep pink */
+  --color-primary-700: #cc3760;
+  /* darker pink */
+  --color-primary-800: #992943;
+  /* wine tone */
+  --color-primary-900: #661c2d;
+  /* dark wine */
+  --color-primary-950: #330e16;
+  /* near-black wine */
+
+  --color-gray-25: #fcfcfd;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f2f4f7;
+  --color-gray-200: #e4e7ec;
+  --color-gray-300: #d0d5dd;
+  --color-gray-400: #98a2b3;
+  --color-gray-500: #667085;
+  --color-gray-600: #475467;
+  --color-gray-700: #344054;
+  --color-gray-800: #1d2939;
+  --color-gray-900: #101828;
+  --color-gray-950: #0c111d;
+  --color-gray-dark: #1a2231;
+
+  --color-orange-25: #fffaf5;
+  --color-orange-50: #fff6ed;
+  --color-orange-100: #ffead5;
+  --color-orange-200: #fddcab;
+  --color-orange-300: #feb273;
+  --color-orange-400: #fd853a;
+  --color-orange-500: #fb6514;
+  --color-orange-600: #ec4a0a;
+  --color-orange-700: #c4320a;
+  --color-orange-800: #9c2a10;
+  --color-orange-900: #7e2410;
+  --color-orange-950: #511c10;
+
+  --color-success-25: #f6fef9;
+  --color-success-50: #ecfdf3;
+  --color-success-100: #d1fadf;
+  --color-success-200: #a6f4c5;
+  --color-success-300: #6ce9a6;
+  --color-success-400: #32d583;
+  --color-success-500: #12b76a;
+  --color-success-600: #039855;
+  --color-success-700: #027a48;
+  --color-success-800: #05603a;
+  --color-success-900: #054f31;
+  --color-success-950: #053321;
+
+  --color-error-25: #fffbfa;
+  --color-error-50: #fef3f2;
+  --color-error-100: #fee4e2;
+  --color-error-200: #fecdca;
+  --color-error-300: #fda29b;
+  --color-error-400: #f97066;
+  --color-error-500: #f04438;
+  --color-error-600: #d92d20;
+  --color-error-700: #b42318;
+  --color-error-800: #912018;
+  --color-error-900: #7a271a;
+  --color-error-950: #55160c;
+
+  --color-warning-25: #fffcf5;
+  --color-warning-50: #fffaeb;
+  --color-warning-100: #fef0c7;
+  --color-warning-200: #fedf89;
+  --color-warning-300: #fec84b;
+  --color-warning-400: #fdb022;
+  --color-warning-500: #f79009;
+  --color-warning-600: #dc6803;
+  --color-warning-700: #b54708;
+  --color-warning-800: #93370d;
+  --color-warning-900: #7a2e0e;
+  --color-warning-950: #4e1d09;
+
+  --color-theme-pink-500: #ee46bc;
+
+  --color-theme-purple-500: #7a5af8;
+
+  --shadow-theme-md: 0px 4px 8px -2px rgba(16, 24, 40, 0.1),
+    0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+  --shadow-theme-lg: 0px 12px 16px -4px rgba(16, 24, 40, 0.08),
+    0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+  --shadow-theme-sm: 0px 1px 3px 0px rgba(16, 24, 40, 0.1),
+    0px 1px 2px 0px rgba(16, 24, 40, 0.06);
+  --shadow-theme-xs: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --shadow-theme-xl: 0px 20px 24px -4px rgba(16, 24, 40, 0.08),
+    0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+  --shadow-datepicker: -5px 0 0 #262d3c, 5px 0 0 #262d3c;
+  --shadow-focus-ring: 0px 0px 0px 4px rgba(70, 95, 255, 0.12);
+  --shadow-slider-navigation: 0px 1px 2px 0px rgba(16, 24, 40, 0.1),
+    0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+  --shadow-tooltip: 0px 4px 6px -2px rgba(16, 24, 40, 0.05),
+    -8px 0px 20px 8px rgba(16, 24, 40, 0.05);
+
+  --drop-shadow-4xl: 0 35px 35px rgba(0, 0, 0, 0.25),
+    0 45px 65px rgba(0, 0, 0, 0.15);
+
+  --z-index-1: 1;
+  --z-index-9: 9;
+  --z-index-99: 99;
+  --z-index-999: 999;
+  --z-index-9999: 9999;
+  --z-index-99999: 99999;
+  --z-index-999999: 999999;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  body {
+    @apply relative font-normal font-outfit z-1 bg-gray-50;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-zinc-400);
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(233, 232, 232);
+}
+
+@utility menu-item {
+  @apply relative flex items-center w-full gap-3 px-3 py-2 font-medium rounded-lg text-theme-sm;
+}
+
+@utility menu-item-active {
+  @apply bg-primary-50 text-primary-500;
+}
+
+@utility menu-item-inactive {
+  @apply text-gray-700 hover:bg-gray-100 group-hover:text-gray-700 dark:hover:bg-white/5 dark:hover:text-gray-300;
+}
+
+@utility menu-item-icon {
+  @apply text-gray-500 group-hover:text-gray-700;
+}
+
+@utility menu-item-icon-active {
+  @apply text-primary-500;
+}
+
+@utility menu-item-icon-size {
+  & svg {
+    @apply !size-6;
+  }
+}
+
+@utility menu-item-icon-inactive {
+  @apply text-gray-500 group-hover:text-gray-700 dark:group-hover:text-gray-300;
+}
+
+@utility menu-item-arrow {
+  @apply relative;
+}
+
+@utility menu-item-arrow-active {
+  @apply rotate-180 text-primary-500;
+}
+
+@utility menu-item-arrow-inactive {
+  @apply text-gray-500 group-hover:text-gray-700 dark:group-hover:text-gray-300;
+}
+
+@utility menu-dropdown-item {
+  @apply relative flex items-center gap-3 rounded-lg px-3 py-2.5 text-theme-sm font-medium;
+}
+
+@utility menu-dropdown-item-active {
+  @apply bg-primary-50 text-primary-500;
+}
+
+@utility menu-dropdown-item-inactive {
+  @apply text-gray-700 hover:bg-gray-100 dark:hover:bg-white/5;
+}
+
+@utility menu-dropdown-badge {
+  @apply block rounded-full px-2.5 py-0.5 text-xs font-medium uppercase text-primary-500;
+}
+
+@utility menu-dropdown-badge-active {
+  @apply bg-primary-100;
+}
+
+@utility menu-dropdown-badge-inactive {
+  @apply bg-primary-50 group-hover:bg-primary-100 dark:group-hover:bg-primary-500/20;
+}
+
+@utility no-scrollbar {
+  /* Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+@utility custom-scrollbar {
+  &::-webkit-scrollbar {
+    @apply size-1.5;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply rounded-full;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply bg-gray-200 rounded-full dark:bg-gray-700;
+  }
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #344054;
+}
+
+@layer utilities {
+  /* For Remove Date Icon */
+  input[type="date"]::-webkit-inner-spin-button,
+  input[type="time"]::-webkit-inner-spin-button,
+  input[type="date"]::-webkit-calendar-picker-indicator,
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+}
+
+/* ---------------------------
+   Typography & Text Editor
+--------------------------- */
+.text-editor {
+  overflow-x: auto;
+}
+
+.text-editor h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.text-editor h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.text-editor h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+}
+
+.text-editor h4,
+.text-editor h5,
+.text-editor h6 {
+  font-weight: bold;
+}
+
+.text-editor h5 {
+  font-size: 0.83em;
+}
+
+.text-editor h6 {
+  font-size: 0.67em;
+}
+
+.text-editor p {
+  margin-bottom: 1em;
+  line-height: 1.7;
+}
+
+.text-editor strong {
+  font-weight: bold;
+}
+
+.text-editor em {
+  font-style: italic;
+}
+
+.text-editor u {
+  text-decoration: underline;
+}
+
+/* ---------------------------
+   Lists
+--------------------------- */
+.text-editor ul,
+.text-editor ol {
+  margin-block: 1em;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+}
+
+.text-editor ul {
+  list-style-type: disc;
+}
+
+.text-editor ol {
+  list-style-type: decimal;
+}
+
+.text-editor ul li,
+.text-editor ol li {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5em;
+  text-align: -webkit-match-parent;
+  position: relative;
+  display: list-item;
+  unicode-bidi: isolate;
+}
+
+.text-editor ol li ul {
+  list-style-type: circle;
+}
+
+.text-editor ul ul,
+.text-editor ol ol,
+.text-editor ul ol,
+.text-editor ol ul {
+  margin: 0.5em 0;
+  padding-left: 1.5rem;
+}
+
+/* Checklist Style */
+.text-editor .tox-checklist > li {
+  list-style: none;
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+.text-editor .tox-checklist > .tox-checklist--checked:before {
+  content: url(data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cg%20id%3D%22checklist-checked%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Crect%20id%3D%22Rectangle%22%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%234099FF%22%20fill-rule%3D%22nonzero%22%20rx%3D%222%22%2F%3E%3Cpath%20id%3D%22Path%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%20d%3D%22M11.5703186%2C3.14417309%20C11.8516238%2C2.73724603%2012.4164781%2C2.62829933%2012.83558%2C2.89774797%20C13.260121%2C3.17069355%2013.3759736%2C3.72932262%2013.0909105%2C4.14168582%20L7.7580587%2C11.8560195%20C7.43776896%2C12.3193404%206.76483983%2C12.3852142%206.35607322%2C11.9948725%20L3.02491697%2C8.8138662%20C2.66090143%2C8.46625845%202.65798871%2C7.89594698%203.01850234%2C7.54483354%20C3.373942%2C7.19866177%203.94940006%2C7.19592841%204.30829608%2C7.5386474%20L6.85276923%2C9.9684299%20L11.5703186%2C3.14417309%20Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A);
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-size: 1rem;
+}
+
+.text-editor .tox-checklist > li:before {
+  content: url(data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cg%20id%3D%22checklist-unchecked%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Crect%20id%3D%22Rectangle%22%20width%3D%2215%22%20height%3D%2215%22%20x%3D%22.5%22%20y%3D%22.5%22%20fill-rule%3D%22nonzero%22%20stroke%3D%22%234C4C4C%22%20rx%3D%222%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A);
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-size: 1rem;
+}
+
+/* ---------------------------
+   Tables
+--------------------------- */
+.text-editor table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+  min-width: 600px;
+}
+
+.text-editor th,
+.text-editor td {
+  border: 1px solid #ddd;
+  padding: 0.75em;
+  text-align: left;
+}
+
+.text-editor thead {
+  background-color: #f5f5f5;
+}
+
+.text-editor tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* ---------------------------
+   Blockquotes
+--------------------------- */
+.text-editor blockquote {
+  border-left: 4px solid var(--secondary);
+  padding-left: 1rem;
+  color: #666;
+  font-style: italic;
+  margin: 1em 0;
+}
+
+/* ---------------------------
+   Images
+--------------------------- */
+.text-editor img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em 0;
+}
+
+/* ---------------------------
+   Links
+--------------------------- */
+.text-editor a:-webkit-any-link {
+  color: #0975e0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.text-editor a:-webkit-any-link:read-write {
+  cursor: text;
+}
+
+/* ---------------------------
+   Responsive Styles
+--------------------------- */
+@media (max-width: 768px) {
+  .text-editor ul,
+  .text-editor ol {
+    padding-left: 1.25rem;
+  }
+
+  .text-editor ul li,
+  .text-editor ol li {
+    font-size: 0.95rem;
+  }
+}
+
+a.canvasjs-chart-credit {
+  display: none;
+}

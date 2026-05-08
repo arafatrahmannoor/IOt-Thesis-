@@ -1,0 +1,40 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/index.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "MONGODB_URI": "mongodb+srv://miyamdsohag:test@cluster0.wejxhce.mongodb.net",
+    "JWT_SECRET": "your-super-secret-jwt-key",
+    "STRIPE_SECRET_KEY": "sk_test_BQokikJOvBiI2HlWgH4olfQ2",
+    "STRIPE_PUBLISHABLE_KEY": "pk_test_TYooMQauvdEDq54NiTphI7jx",
+    "PORT": "5001",
+    "SERVER_URL": "https://api.smartrecruit.agency",
+    "BCRYPT_SALT_ROUNDS": "12",
+    "JWT_ACCESS_SECRET": "41b991b21dc0a439cb45fed544992ba3fafa3f912d3c4dedebec3592d7d552fb74a86a4d69ea560bcf7bf988d173ddecaffa9815dd5a6661bcacd58c0cdb2dc5",
+    "JWT_ACCESS_EXPIRES_IN": "7d",
+    "JWT_REFRESH_SECRET": "f42c6ff9f07ca36f2a13b29d5fecff8aafb1ab84d20a26eff70b3c9742a0570f57c0d1c9cdf3efdbd64f98ce5f089080aed91a04627ec60b62e61c53932c2ce6",
+    "JWT_REFRESH_EXPIRES_IN": "1y",
+    "JWT_OTP_SECRET": "124324",
+    "JWT_PASS_RESET_SECRET": "dsagfadsgewagdsafddh",
+    "JWT_PASS_RESET_EXPIRES_IN": "30d",
+    "MAIL_MAILER": "smtp",
+    "MAIL_HOST": "smtp.office365.com",
+    "MAIL_PORT": "587",
+    "MAIL_USERNAME": "info.group@silkways.net",
+    "MAIL_PASSWORD": "Silk@2050",
+    "MAIL_ENCRYPTION": "tls",
+    "MAIL_FROM_ADDRESS": "info.group@silkways.net",
+    "RECAPTCHA_SECRET": "6LdqM9ErAAAAAFGuPtCvDP4NISljxlgIxpYrN8RK"
+  }
+}

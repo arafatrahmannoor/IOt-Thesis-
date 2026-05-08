@@ -1,0 +1,28 @@
+/* Custom styles for table header */
+.ant-table-wrapper .ant-table-thead>tr>th {
+  background-color: #f9f9f9;
+  color: #232323;
+  font-size: 12px;
+  overflow: hidden;
+
+}
+
+.ant-table-wrapper .ant-table-tbody>tr>td {
+  background-color: #fff;
+  color: #232323;
+  font-size: 12px;
+  overflow: hidden;
+
+}
+
+/* Custom styles for table row hover */
+.ant-table-wrapper .ant-table-tbody .ant-table-row>.ant-table-cell-row-hover {
+  background: rgb(245, 247, 249) !important;
+  cursor: pointer;
+
+}
+
+.ant-table-wrapper {
+  background-color: #fff;
+  overflow: hidden;
+}
